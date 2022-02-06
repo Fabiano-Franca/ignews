@@ -1,0 +1,36 @@
+.signInButton {
+    //Se colocar height e border-radius com o mesmo valor, teremos o máximo de arredondamento de borda.
+    height: 3rem;
+    border-radius: 3rem;
+    background: var(--gray-800);
+
+    border: 0;
+    padding: 0 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--white);
+    font-weight: bold;
+
+    //PAra mudar o tamanha do SGC tem que definir os valores das duas propriedades
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    svg:first-child {
+        margin-right: 1rem;
+    }
+
+    svg.closeIcon {
+        margin-left: 1rem;
+    }
+
+    transition: filter 0.2s;
+
+    &:hover {
+        filter: brightness(0.8);
+    }
+}
