@@ -1,5 +1,4 @@
 import Stripe from 'stripe';
-import { version } from '../../package.json';
 
 //1º Parâmetro: a secret key (chave) do stripe
 //2º Parâmetro: as configurações obrigatórias
@@ -9,7 +8,7 @@ export const stripe = new Stripe(
         apiVersion: '2020-08-27',
         appInfo: {
             name: 'Ignews',
-            version,
+            version: '1.0',
         },
 
     }
