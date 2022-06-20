@@ -35,18 +35,44 @@ export async function saveSubscription(
     console.log("subscriptionData: " + subscriptionData)
 
 
-    if(createAction){
+    if (createAction) {
         await fauna.query(
             q.Create(
                 q.Collection('subscriptions'),
                 { data: subscriptionData }
             )
         )
-    }else{
-        
-
+    } else {
+        //Update -> Modifica um campo específico do registro
+        //Replace -> Substitui todo o registro
+        await fauna.query(
+            q.Replace(
+                q.Select(
+                    "ref",
+                    q.Get(
+                        q.Match(
+                            q.Index('subscription_by_id'),
+                            subscriptionId
+                        )
+                    )
+                ),
+                { data: subscriptionData }
+            )
+            /**
+             q.Update(
+                q.Select(
+                    "ref",
+                    q.Get(
+                        q.Match(
+                            q.Index('subscription_by_id'),
+                            subscriptionId
+                        )
+                    )
+                ),
+                { data: { status: subscriptionData.status }}
+            )
+             */
+        )
     }
-
-
 
 }
