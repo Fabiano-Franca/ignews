@@ -1,0 +1,21 @@
+{
+  "id": "00d43e74-65a7-4f71-8b3e-f3bf414c50b5",
+  "uid": "sit-est-debitis",
+  "type": "id-publication",
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Esse eu elit mollit dolor eu do incididunt anim. Sunt esse laborum duis.",
+        "spans": []
+      }
+    ],
+    "content": [
+      {
+        "type": "heading1",
+        "text": "Harness next-generation bandwidth",
+        "spans": []
+      }
+    ]
+  }
+}
