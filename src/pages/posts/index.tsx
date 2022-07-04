@@ -47,15 +47,13 @@ export const getStaticProps: GetStaticProps = async () => {
         pageSize: 100,
     })
 
-    console.log(JSON.stringify(response, null, 2))
     //console.log(JSON.stringify(response, null, 2))
 
     const posts = response.results.map(post => {
         return {
             slug: post.uid,
             title: RichText.asText(post.data.title),
-            excerpt: RichText.asText(post.data.content),
-            //excerpt: post.data.content.find(content => content.type === 'paragraph')?.text ?? '',
+            excerpt: post.data.content.find(content => content.type === 'paragraph')?.text ?? '',
             updateAt: new Date(post.last_publication_date).toLocaleDateString('pt-BR', {
                 day: '2-digit',
                 month: 'long',
@@ -63,9 +61,7 @@ export const getStaticProps: GetStaticProps = async () => {
             }),
         }
     })
-
-    console.log(posts)
-
+    //console.log(posts)
     return {
         props: {
             posts

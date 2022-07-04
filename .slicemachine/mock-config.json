@@ -17,13 +17,13 @@
     "id-publication": {
       "title": {
         "config": {
-          "patternType": "PARAGRAPH",
+          "patternType": "HEADING",
           "blocks": 1
         }
       },
       "content": {
         "config": {
-          "patternType": "HEADING",
+          "patternType": "PARAGRAPH",
           "blocks": 1
         }
       }
