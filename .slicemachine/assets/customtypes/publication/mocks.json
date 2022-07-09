@@ -1,0 +1,21 @@
+{
+  "id": "ed3e5d7f-23e1-42f5-8c61-b8831cfcf169",
+  "uid": "ut-perspiciatis-rem",
+  "type": "publication",
+  "data": {
+    "Title": [
+      {
+        "type": "heading1",
+        "text": "Extend cross-media blockchains",
+        "spans": []
+      }
+    ],
+    "Content": [
+      {
+        "type": "paragraph",
+        "text": "Cupidatat consectetur ipsum cillum eiusmod consectetur do tempor deserunt ullamco non ullamco tempor dolore reprehenderit. Elit qui qui ea incididunt nulla esse minim nostrud minim ullamco proident eiusmod veniam est.",
+        "spans": []
+      }
+    ]
+  }
+}

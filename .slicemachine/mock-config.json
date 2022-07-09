@@ -1,27 +1,13 @@
 {
   "_cts": {
-    "id": {
-      "title": {
-        "config": {
-          "patternType": "PARAGRAPH",
-          "blocks": 1
-        }
-      },
-      "content": {
-        "config": {
-          "patternType": "HEADING",
-          "blocks": 1
-        }
-      }
-    },
-    "id-publication": {
-      "title": {
+    "publication": {
+      "Title": {
         "config": {
           "patternType": "HEADING",
           "blocks": 1
         }
       },
-      "content": {
+      "Content": {
         "config": {
           "patternType": "PARAGRAPH",
           "blocks": 1

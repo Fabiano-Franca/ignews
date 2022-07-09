@@ -4,6 +4,7 @@ import Prismic from '@prismicio/client';
 import { GetStaticProps } from 'next';
 import { getPrismicClient } from './../../services/prismic';
 import { RichText } from 'prismic-dom';
+import Link from 'next/link';
 
 type Post = {
     slug: string;
@@ -25,11 +26,13 @@ export default function Posts({ posts }: PostsProps ){
             <main className={styles.container}>
                 <div className={styles.posts}>
                     { posts.map(post => (
-                        <a key={post.slug} href="#">
-                            <time>{post.updateAt}</time>
-                            <strong>{ post.title }</strong>
-                            <p>{ post.excerpt }</p>
-                        </a>
+                        <Link  href={`/posts/${post.slug}`} key={post.slug}>
+                            <a>
+                                <time>{post.updateAt}</time>
+                                <strong>{ post.title }</strong>
+                                <p>{ post.excerpt }</p>
+                            </a>
+                        </Link>
                     )) }
                 </div>
             </main>
@@ -41,14 +44,13 @@ export const getStaticProps: GetStaticProps = async () => {
     const prismic = getPrismicClient()
     
     const response = await prismic.query([
-        Prismic.predicates.at('document.type', 'id-publication')
+        Prismic.predicates.at('document.type', 'publication')
     ], {
-        fetch: ['id-publication.title', 'id-publication.content'],
+        fetch: ['publication.Title', 'publication.Content'],
         pageSize: 100,
     })
-
-    //console.log(JSON.stringify(response, null, 2))
-
+    console.log("Response -> ")
+    console.log(response)
     const posts = response.results.map(post => {
         return {
             slug: post.uid,
@@ -61,7 +63,8 @@ export const getStaticProps: GetStaticProps = async () => {
             }),
         }
     })
-    //console.log(posts)
+    console.log("Posts -> ")
+    console.log(posts)
     return {
         props: {
             posts
