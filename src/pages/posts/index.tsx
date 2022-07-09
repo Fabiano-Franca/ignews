@@ -49,8 +49,7 @@ export const getStaticProps: GetStaticProps = async () => {
         fetch: ['publication.Title', 'publication.Content'],
         pageSize: 100,
     })
-    console.log("Response -> ")
-    console.log(response)
+
     const posts = response.results.map(post => {
         return {
             slug: post.uid,
@@ -63,8 +62,7 @@ export const getStaticProps: GetStaticProps = async () => {
             }),
         }
     })
-    console.log("Posts -> ")
-    console.log(posts)
+
     return {
         props: {
             posts
