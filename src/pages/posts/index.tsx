@@ -49,9 +49,7 @@ export const getStaticProps: GetStaticProps = async () => {
         fetch: ['id-publication.title', 'id-publication.content'],
         pageSize: 100,
     })
-    console.log(prismic)
-    console.log(response)
-
+    
     const posts = response.results.map(post => {
         return {
             slug: post.uid,
