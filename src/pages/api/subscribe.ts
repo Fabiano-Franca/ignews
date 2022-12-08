@@ -63,7 +63,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             ],
             mode: 'subscription',
             allow_promotion_codes: true,
-            success_url: process.env.STRIPE_SUCESS_URL,
+            success_url: process.env.STRIPE_SUCCESS_URL,
             cancel_url: process.env.STRIPE_CANCEL_URL
         })
 

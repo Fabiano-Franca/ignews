@@ -2334,7 +2334,7 @@ cookie-signature@1.0.6:
   resolved "https://registry.yarnpkg.com/cookie-signature/-/cookie-signature-1.0.6.tgz#e303a882b342cc3ee8ca513a79999734dab3ae2c"
   integrity sha512-QADzlaHc8icV8I7vbaJXJwod9HWYp8uCqf1xa4OfNu1T7JVxQIrUgOWtHdNDtPiywmFbiS12VjotIXLrKM3orQ==
 
-cookie@0.5.0:
+cookie@0.5.0, cookie@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
   integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
@@ -4143,6 +4143,11 @@ jose@^4.1.4, jose@^4.3.7:
   resolved "https://registry.yarnpkg.com/jose/-/jose-4.6.1.tgz#241472ff928c79b2e2e2fe4c1056b3085384ec42"
   integrity sha512-EFnufEivlIB6j7+JwaenYQzdUDs/McajDr9WnhT6EI0WxbexnfuZimpWX1GnobF6OnQsUFmWFXUXdWyZHWdQow==
 
+jose@^4.9.3:
+  version "4.11.1"
+  resolved "https://registry.yarnpkg.com/jose/-/jose-4.11.1.tgz#8f7443549befe5bddcf4bae664a9cbc1a62da4fa"
+  integrity sha512-YRv4Tk/Wlug8qicwqFNFVEZSdbROCHRAC6qu/i0dyNKr5JQdoa2pIGoS04lLO/jXQX7Z9omoNewYIVIxqZBd9Q==
+
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -4776,6 +4781,21 @@ next-auth@*:
     "@panva/hkdf" "^1.0.1"
     cookie "^0.4.1"
     jose "^4.3.7"
+    oauth "^0.9.15"
+    openid-client "^5.1.0"
+    preact "^10.6.3"
+    preact-render-to-string "^5.1.19"
+    uuid "^8.3.2"
+
+next-auth@^4.18.3:
+  version "4.18.3"
+  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-4.18.3.tgz#d5e9fa8649567877632cd3bdb6adfa63c75ebc0b"
+  integrity sha512-oZrTPnaF7YCMm4T6+FY47+1wHacE7V6YX+MCuvRTZMca7zHAc2WPMdTED6eV3hkqp2znEdilhD4aXQ5BuCpYIw==
+  dependencies:
+    "@babel/runtime" "^7.16.3"
+    "@panva/hkdf" "^1.0.1"
+    cookie "^0.5.0"
+    jose "^4.9.3"
     oauth "^0.9.15"
     openid-client "^5.1.0"
     preact "^10.6.3"
